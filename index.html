@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>DKEnterprize</title>
+    <title>DK Enterprise | Furniture Polishing & Wood Finishing Expert, Kolkata</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="dkenterprise">
-    <meta content="" name="description">
+    <meta content="DK Enterprise" name="author">
+    <meta content="Expert furniture polishing, wood finishing, PU, Polycoat and hand polish services in Kolkata by DK Enterprise." name="description">
     <meta name="google-site-verification" content="pJYrFBYDh0RuW56iV9l67q2g5akU07-vX_nvwYACccE">
     <!-- Favicon -->
     <link href="images/logo.png" rel="icon">
@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&amp;family=Inter:wght@700;800&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&family=Raleway:wght@400;500;600;700;800&family=PT+Sans:wght@400;700&family=Playfair+Display:wght@600;700;800&display=swap"
         rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
@@ -39,25 +39,337 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- ===== Custom Elegant Styling (DK Enterprise) ===== -->
+    <style>
+        :root {
+            --brown-dark: #2c1810;
+            --brown: #562f1a;
+            --brown-mid: #754023;
+            --gold: #cda45e;
+            --gold-dark: #b8904a;
+            --cream: #fffbf0;
+            --cream-2: #f7f1e3;
+        }
+
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Raleway', 'Heebo', sans-serif; background: #fffdf8; }
+        [id] { scroll-margin-top: 88px; }
+
+        ::selection { background: var(--gold); color: var(--brown-dark); }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1ead9; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(var(--gold), var(--gold-dark)); border-radius: 8px; }
+
+        /* ================= NAVBAR ================= */
+        #navigation-bar {
+            position: sticky; top: 0; z-index: 1030;
+            background: rgba(255, 251, 240, .93);
+            backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(205, 164, 94, .22);
+            transition: box-shadow .35s ease, background .35s ease;
+        }
+        #navigation-bar.scrolled { box-shadow: 0 8px 30px rgba(44, 24, 16, .13); background: rgba(255, 251, 240, .98); }
+        #navigation-bar .navbar { padding: 10px 16px; }
+        #navigation-bar .navbar-brand img { height: 62px; width: auto; transition: height .35s ease; }
+        #navigation-bar.scrolled .navbar-brand img { height: 52px; }
+
+        #navigation-bar .nav-link {
+            font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 14.5px;
+            letter-spacing: .6px; text-transform: uppercase; color: var(--brown);
+            padding: 10px 14px !important; position: relative; transition: color .3s;
+        }
+        #navigation-bar .nav-link::after {
+            content: ""; position: absolute; left: 14px; right: 14px; bottom: 4px;
+            height: 2px; background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+            border-radius: 2px; transform: scaleX(0); transition: transform .35s ease;
+        }
+        #navigation-bar .nav-link:hover, #navigation-bar .nav-link.active { color: #8a6a2c; }
+        #navigation-bar .nav-link:hover::after, #navigation-bar .nav-link.active::after { transform: scaleX(1); }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: #fff !important; border-radius: 50px; padding: 10px 24px !important;
+            font-weight: 700; box-shadow: 0 6px 18px rgba(205, 164, 94, .45);
+            transition: transform .3s, box-shadow .3s;
+        }
+        .nav-cta::after { display: none; }
+        .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(205, 164, 94, .55); color: #fff !important; }
+
+        @media (max-width: 991.98px) {
+            #navigation-bar .navbar-collapse {
+                background: var(--cream); border: 1px solid rgba(205, 164, 94, .3);
+                border-radius: 14px; margin-top: 12px; padding: 8px 4px;
+            }
+            #navigation-bar .nav-link { text-align: center; }
+            #navigation-bar .nav-link::after { left: 35%; right: 35%; }
+        }
+
+        /* ================= HERO SLIDER ================= */
+        #home { position: relative; }
+        #home .carousel-item img { filter: saturate(1.05); }
+        #home .carousel-caption { right: 8%; left: 8%; bottom: 9%; z-index: 5; }
+
+        #home .hero-caption {
+            background: rgba(30, 16, 10, .55);
+            backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(205, 164, 94, .4);
+            border-radius: 18px; padding: 22px 30px 26px;
+            max-width: 780px; margin: 0 auto;
+        }
+        #home .hero-tag {
+            display: inline-block; color: var(--gold); font-size: 12px; font-weight: 700;
+            letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px;
+        }
+        #home .hero-caption h3 {
+            font-family: 'Playfair Display', serif; font-weight: 700;
+            font-size: clamp(1.4rem, 3.5vw, 2.4rem); margin-bottom: 10px;
+        }
+        #home .hero-caption h3::after {
+            content: ""; display: block; width: 70px; height: 3px;
+            margin: 12px auto 0; background: var(--gold); border-radius: 2px;
+        }
+        #home .hero-caption p { color: #f3ede1; font-size: clamp(.85rem, 1.6vw, 1.05rem); margin-bottom: 16px; }
+
+        #home .hero-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .btn-hero-gold, .btn-hero-line {
+            display: inline-block; padding: 10px 26px; border-radius: 50px;
+            font-weight: 700; font-size: 14px; letter-spacing: .5px; transition: all .3s;
+        }
+        .btn-hero-gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--brown-dark); box-shadow: 0 6px 18px rgba(0, 0, 0, .25);
+        }
+        .btn-hero-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0, 0, 0, .35); color: var(--brown-dark); }
+        .btn-hero-line { border: 1.5px solid rgba(255, 255, 255, .7); color: #fff; }
+        .btn-hero-line:hover { background: rgba(255, 255, 255, .15); border-color: var(--gold); color: #fff; }
+
+        #home .carousel-indicators { bottom: 16px; margin-bottom: 0; }
+        #home .carousel-indicators [data-bs-target] {
+            width: 10px; height: 10px; border-radius: 50%;
+            background: var(--gold); border: none; opacity: .45; transition: all .3s;
+        }
+        #home .carousel-indicators [data-bs-target].active { opacity: 1; transform: scale(1.25); }
+
+        @media (max-width: 576px) {
+            #home .hero-caption { padding: 14px 16px 18px; border-radius: 12px; }
+            #home .hero-caption p { font-size: .8rem; margin-bottom: 10px; }
+            .btn-hero-gold, .btn-hero-line { padding: 8px 18px; font-size: 12.5px; }
+        }
+
+        /* ================= SECTION HEADINGS ================= */
+        .section-head { max-width: 680px; margin: 0 auto 3.5rem; text-align: center; }
+        .section-label {
+            display: inline-block; color: #a87f33; font-size: 12px; font-weight: 700;
+            letter-spacing: 3.5px; text-transform: uppercase; margin-bottom: 10px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif; font-weight: 700; color: var(--brown);
+            font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 14px;
+        }
+        .gold-divider { display: flex; align-items: center; justify-content: center; gap: 12px; }
+        .gold-divider span { display: block; width: 60px; height: 1.5px; background: var(--gold); }
+        .gold-divider i { color: var(--gold); font-size: 13px; }
+        .section-head p { color: #6b5138; margin-top: 16px; }
+
+        /* ================= ABOUT ================= */
+        #about .about-card {
+            background: #fff; border-radius: 16px; overflow: hidden;
+            box-shadow: 0 8px 26px rgba(44, 24, 16, .1);
+            border: 1px solid rgba(205, 164, 94, .2);
+            transition: transform .4s ease, box-shadow .4s ease;
+        }
+        #about .about-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(44, 24, 16, .16); }
+        #about .about-img { overflow: hidden; }
+        #about .about-img img { width: 100%; display: block; transition: transform .6s ease; }
+        #about .about-card:hover .about-img img { transform: scale(1.06); }
+        #about .about-label {
+            display: block; padding: 12px 16px; text-align: center; font-weight: 700;
+            color: var(--brown); background: var(--cream-2);
+            border-top: 1px solid rgba(205, 164, 94, .25); letter-spacing: 1px; font-size: 14px;
+        }
+        #about .map-card { display: flex; flex-direction: column; }
+        #about .map-card iframe { flex: 1; border: 0; display: block; }
+
+        /* ================= COUNTER / WHY US ================= */
+        #counter {
+            position: relative; overflow: hidden;
+            background: linear-gradient(165deg, #2c1810 0%, #3d2315 55%, #46281a 100%);
+            border-top: 3px solid var(--gold);
+            padding: 90px 0 160px;
+        }
+        #counter .sub-title {
+            color: var(--gold); letter-spacing: 3px; text-transform: uppercase;
+            font-size: 13px; font-weight: 700; display: block; margin-bottom: 12px;
+        }
+        #counter h2 {
+            color: #fff; font-family: 'Playfair Display', serif;
+            font-size: clamp(1.7rem, 3.5vw, 2.4rem); margin-bottom: 1rem;
+        }
+        #counter p { color: #e0d4c2; }
+        #counter .counter-box {
+            background: rgba(255, 255, 255, .06); border: 1px solid rgba(205, 164, 94, .3);
+            border-radius: 16px; padding: 28px 18px; text-align: center;
+            backdrop-filter: blur(4px); transition: all .4s ease;
+        }
+        #counter .counter-box:hover {
+            transform: translateY(-6px); border-color: var(--gold); background: rgba(255, 255, 255, .1);
+        }
+        #counter .counter-box i { font-size: 28px; color: var(--gold); margin-bottom: 12px; }
+        #counter .counter-number {
+            font-size: 42px; font-weight: 800; color: #fff; font-family: 'Playfair Display', serif;
+            display: block; line-height: 1.1;
+        }
+        #counter .counter-suffix { color: var(--gold); font-size: .6em; margin-left: 3px; }
+        #counter .counter-text {
+            color: var(--gold); text-transform: uppercase; letter-spacing: 2px;
+            font-size: 12px; margin: 8px 0 0; font-weight: 600;
+        }
+        /* Bottom wave */
+        #counter .custom-shape-divider-bottom-1663000000 {
+            position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0;
+        }
+        #counter .custom-shape-divider-bottom-1663000000 svg { width: 100%; height: 95px; display: block; }
+        #counter .custom-shape-divider-bottom-1663000000 .shape-fill { fill: #fffbf0; }
+
+        /* ================= SERVICES CARDS ================= */
+        #services { background: linear-gradient(to bottom right, #fffbf0, #f7f1e3 55%, #eae0c8); }
+        #services .svc-card {
+            background: linear-gradient(160deg, var(--brown) 0%, var(--brown-mid) 100%);
+            border-radius: 18px; overflow: hidden; height: 100%; display: flex; flex-direction: column;
+            box-shadow: 0 12px 32px rgba(44, 24, 16, .22);
+            border: 1px solid rgba(205, 164, 94, .15);
+            transition: transform .4s ease, box-shadow .4s ease;
+        }
+        #services .svc-card:hover { transform: translateY(-10px); box-shadow: 0 24px 50px rgba(44, 24, 16, .3); }
+        #services .svc-img { height: 240px; overflow: hidden; position: relative; }
+        #services .svc-img::after {
+            content: ""; position: absolute; inset: 0;
+            background: linear-gradient(180deg, transparent 55%, rgba(44, 24, 16, .55));
+        }
+        #services .svc-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+        #services .svc-card:hover .svc-img img { transform: scale(1.1); }
+        #services .svc-body { padding: 22px; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        #services .svc-body h6 {
+            font-family: 'Playfair Display', serif; color: #fff; font-size: 1.2rem;
+            letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0;
+        }
+        #services .svc-body h6::after {
+            content: ""; display: block; width: 44px; height: 2px;
+            background: var(--gold); margin: 10px auto 0;
+        }
+        #services .svc-body p { color: #e8ddc7; font-size: .9rem; line-height: 1.65; margin: 12px 0 0; }
+
+        /* ================= EXPERTISE ================= */
+        #expertise { background: #fff; }
+        #expertise .service-item {
+            background: #fff; border: 1px solid rgba(205, 164, 94, .28);
+            border-radius: 16px; transition: all .4s ease; height: 100%;
+            overflow: hidden; position: relative;
+        }
+        #expertise .service-item::before {
+            content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+            transform: scaleX(0); transform-origin: left; transition: transform .4s;
+        }
+        #expertise .service-item:hover::before { transform: scaleX(1); }
+        #expertise .service-item:hover {
+            transform: translateY(-8px); box-shadow: 0 18px 40px rgba(44, 24, 16, .15);
+            border-color: rgba(205, 164, 94, .5);
+        }
+        #expertise .service-item i { color: var(--gold); }
+        #expertise .service-item h5 { font-family: 'Playfair Display', serif; color: var(--brown); }
+        #expertise .service-item p { color: #6b5138; }
+
+        /* ================= FAQ ================= */
+        #faq { background: var(--cream-2); }
+        #faq .faq-item {
+            background: #fff; border: 1px solid rgba(205, 164, 94, .3);
+            border-radius: 14px; transition: box-shadow .3s, border-color .3s; height: fit-content;
+        }
+        #faq .faq-item[open] { border-color: var(--gold); box-shadow: 0 12px 32px rgba(44, 24, 16, .12); }
+        #faq .faq-item summary { list-style: none; }
+        #faq .faq-item summary::-webkit-details-marker { display: none; }
+        #faq .faq-q {
+            display: flex; align-items: center; justify-content: space-between; gap: 16px;
+            padding: 20px 24px; cursor: pointer; font-weight: 700;
+            color: var(--brown); font-size: 1.02rem;
+        }
+        #faq .faq-icon { color: var(--gold); transition: transform .35s; flex-shrink: 0; }
+        #faq .faq-item[open] .faq-icon { transform: rotate(180deg); }
+        #faq .faq-a {
+            padding: 0 24px 22px; color: #6b5138; line-height: 1.75;
+            font-family: 'PT Sans', 'Raleway', sans-serif;
+            border-top: 1px dashed rgba(205, 164, 94, .35); padding-top: 16px;
+        }
+
+        /* ================= FOOTER ================= */
+        #contact .footer-links { list-style: none; padding: 0; margin: 0; }
+        #contact .footer-links li { margin-bottom: 12px; }
+        #contact .footer-links a {
+            color: #d9cfc0; transition: all .3s; display: inline-flex; align-items: center;
+            font-family: 'PT Sans', sans-serif; font-size: 15px;
+        }
+        #contact .footer-links a i { color: var(--gold); margin-right: 10px; font-size: 12px; transition: margin .3s; }
+        #contact .footer-links a:hover { color: var(--gold); }
+        #contact .footer-links a:hover i { margin-right: 14px; }
+
+        /* ================= FLOATING BUTTONS ================= */
+        .float-btn {
+            position: fixed; right: 22px; width: 52px; height: 52px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; z-index: 1050;
+            box-shadow: 0 10px 26px rgba(44, 24, 16, .35); transition: transform .3s, opacity .3s, visibility .3s;
+        }
+        #whatsapp-float {
+            bottom: 22px; background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--brown-dark); font-size: 26px; text-decoration: none;
+        }
+        #whatsapp-float:hover { transform: translateY(-4px) scale(1.05); color: var(--brown-dark); }
+        #back-to-top {
+            bottom: 86px; background: linear-gradient(160deg, var(--brown), var(--brown-mid));
+            color: var(--gold); border: 1px solid rgba(205, 164, 94, .4); cursor: pointer;
+            opacity: 0; visibility: hidden;
+        }
+        #back-to-top.show { opacity: 1; visibility: visible; }
+        #back-to-top:hover { transform: translateY(-4px); }
+    </style>
 </head>
 
 <body>
-    <!-- Navbar Starts -->
-    <div class="container-fluid nav_bar " id="navigation-bar">
-        <nav class="navbar navbar-expand-lg navbar-light py-0 px-4 ">
-            <a class="navbar-brand d-flex align-items-center text-center wow fadeInLeft" data-wow-delay="0.1s"
-                data-wow-duration="0.1s" href="/">
-                <img src="images/logo.png" alt="">
+    <!-- ================= Navbar Starts ================= -->
+    <div class="container-fluid nav_bar" id="navigation-bar">
+        <nav class="navbar navbar-expand-lg navbar-light py-0 px-3 px-lg-4" aria-label="Main navigation">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="images/logo.png" alt="DK Enterprise Logo">
             </a>
-
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a class="nav-link nav-cta" href="tel:+919163384579"><i class="fas fa-phone-alt me-2"></i>Call Now</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </div>
     <!-- Navbar ends -->
-    <!-- slider starts -->
-    <div class="container-fluid slider-section ">
+
+    <!-- ================= Hero Slider Starts ================= -->
+    <div class="container-fluid slider-section" id="home">
         <div class="row">
             <div class="col-md-12">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"
+                    data-bs-interval="4500">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
                             class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -71,42 +383,50 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="images/Hand_polish_finish1.jpg" class="d-block w-100" alt="Hand Polish Finish">
-                            <div
-                                class="carousel-caption d-block bg-black/60 rounded-xl p-3 md:p-4 mb-4 md:mb-8 mx-auto w-11/12 md:w-3/4">
-                                <h3 class="text-xl md:text-3xl font-bold text-white mb-1 md:mb-2 font-raleway">Exquisite
-                                    Hand Polish</h3>
-                                <p class="text-sm md:text-lg text-gray-200 mb-0">Transforming furniture with traditional
-                                    craftsmanship for a timeless appeal.</p>
+                            <div class="carousel-caption d-block hero-caption">
+                                <span class="hero-tag">Traditional Craftsmanship</span>
+                                <h3 class="text-white mb-0">Exquisite Hand Polish</h3>
+                                <p>Transforming furniture with traditional craftsmanship for a timeless appeal.</p>
+                                <div class="hero-actions">
+                                    <a href="#services" class="btn-hero-gold">Explore Our Services</a>
+                                    <a href="#contact" class="btn-hero-line">Get a Quote</a>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="images/nc_deco.png" class="d-block w-100" alt="NC Deco">
-                            <div
-                                class="carousel-caption d-block bg-black/60 rounded-xl p-3 md:p-4 mb-4 md:mb-8 mx-auto w-11/12 md:w-3/4">
-                                <h3 class="text-xl md:text-3xl font-bold text-white mb-1 md:mb-2 font-raleway">NC Deco
-                                    Finishes</h3>
-                                <p class="text-sm md:text-lg text-gray-200 mb-0">Modern, glossy, and durable finishes
-                                    that give a premium look to any surface.</p>
+                            <div class="carousel-caption d-block hero-caption">
+                                <span class="hero-tag">Contemporary Shine</span>
+                                <h3 class="text-white mb-0">NC Deco Finishes</h3>
+                                <p>Modern, glossy, and durable finishes that give a premium look to any surface.</p>
+                                <div class="hero-actions">
+                                    <a href="#services" class="btn-hero-gold">Explore Our Services</a>
+                                    <a href="#contact" class="btn-hero-line">Get a Quote</a>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="images/pu_matte_finish.png" class="d-block w-100" alt="PU Matte Finish">
-                            <div
-                                class="carousel-caption d-block bg-black/60 rounded-xl p-3 md:p-4 mb-4 md:mb-8 mx-auto w-11/12 md:w-3/4">
-                                <h3 class="text-xl md:text-3xl font-bold text-white mb-1 md:mb-2 font-raleway">PU Matte
-                                    Elegance</h3>
-                                <p class="text-sm md:text-lg text-gray-200 mb-0">Sophisticated matte textures that
-                                    define luxury and understated beauty.</p>
+                            <div class="carousel-caption d-block hero-caption">
+                                <span class="hero-tag">Understated Luxury</span>
+                                <h3 class="text-white mb-0">PU Matte Elegance</h3>
+                                <p>Sophisticated matte textures that define luxury and understated beauty.</p>
+                                <div class="hero-actions">
+                                    <a href="#services" class="btn-hero-gold">Explore Our Services</a>
+                                    <a href="#contact" class="btn-hero-line">Get a Quote</a>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <img src="images/Hand%20polish%20finish.jpeg" class="d-block w-100" alt="Wood Restoration">
-                            <div
-                                class="carousel-caption d-block bg-black/60 rounded-xl p-3 md:p-4 mb-4 md:mb-8 mx-auto w-11/12 md:w-3/4">
-                                <h3 class="text-xl md:text-3xl font-bold text-white mb-1 md:mb-2 font-raleway">Timeless
-                                    Wood Restoration</h3>
-                                <p class="text-sm md:text-lg text-gray-200 mb-0">Expert restoration services to bring
-                                    back the original glory of your cherished furniture.</p>
+                            <div class="carousel-caption d-block hero-caption">
+                                <span class="hero-tag">Heritage Revived</span>
+                                <h3 class="text-white mb-0">Timeless Wood Restoration</h3>
+                                <p>Expert restoration services to bring back the original glory of your cherished furniture.</p>
+                                <div class="hero-actions">
+                                    <a href="#services" class="btn-hero-gold">Explore Our Services</a>
+                                    <a href="#contact" class="btn-hero-line">Get a Quote</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -122,29 +442,69 @@
                     </button>
                 </div>
             </div>
-
         </div>
-
     </div>
-    <!-- slider ends -->
-
-
+    <!-- Slider ends -->
 
     <div class="home_page">
 
+        <!-- ================= About / Meet The Craftsman ================= -->
+        <div class="container py-5 my-3" id="about">
+            <div class="section-head wow fadeInUp" data-wow-delay="0.1s">
+                <span class="section-label">Meet The Craftsman</span>
+                <h2 class="section-title">Your Furniture Polishing Expert</h2>
+                <div class="gold-divider"><span></span><i class="fas fa-gem"></i><span></span></div>
+                <p>With years of hands-on experience, DK Enterprise has mastered the art of wood finishing — from
+                    traditional hand polish to modern PU and Polycoat surfaces. Every piece is treated with
+                    patience, precision, and pride. Learn more about us below, in your own language.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="about-card">
+                        <div class="about-img">
+                            <img src="images/self_intro_Bengali.jpg" alt="Introduction in Bengali" loading="lazy">
+                        </div>
+                        <span class="about-label">বাংলা &middot; Bengali</span>
+                    </div>
+                </div>
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="about-card">
+                        <div class="about-img">
+                            <img src="images/self_intro_Hindi.jpg" alt="Introduction in Hindi" loading="lazy">
+                        </div>
+                        <span class="about-label">हिन्दी &middot; Hindi</span>
+                    </div>
+                </div>
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="about-card">
+                        <div class="about-img">
+                            <img src="images/self_intro_English.jpg" alt="Introduction in English" loading="lazy">
+                        </div>
+                        <span class="about-label">English</span>
+                    </div>
+                </div>
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="about-card map-card h-100">
+                        <iframe
+                            style="width:100%;height:100%;min-height:300px;"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.859307336682!2d88.38320090951318!3d22.524916634633428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0276b6e73fa16b%3A0x1db54fc53c1eb03e!2s37%2F3B%2C%20Dr%20G%20S%20Bose%20Rd%2C%20Bosepukur%2C%20Kasba%2C%20Kolkata%2C%20West%20Bengal%20700039!5e1!3m2!1sen!2sin!4v1702098456092!5m2!1sen!2sin"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            title="Our Location on Google Maps"></iframe>
+                        <span class="about-label"><i class="fas fa-map-marker-alt me-2"
+                                style="color:#cda45e;"></i>Visit Our Workshop — Kasba, Kolkata</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About ends -->
 
-        <!-- welcome text end-->
-
-
-        <!-- counter -->
-        <div class="counter-section mb-5" id="counter">
-
-
-            <div class="container">
+        <!-- ================= Counter / Why Us ================= -->
+        <div class="counter-section" id="counter">
+            <div class="container position-relative" style="z-index:2;">
                 <div class="row align-items-center">
-                    <div class="col-lg-6 mb-4 mb-lg-0 wow fadeInLeft">
+                    <div class="col-lg-6 mb-5 mb-lg-0 wow fadeInLeft">
                         <div class="counter-content-left">
-                            <span class="sub-title">Our Quality Services</span>
+                            <span class="sub-title">Our Quality Promise</span>
                             <h2>We Ensure Great Quality Every Time</h2>
                             <p>If you connect with me, I assure good quality work every time, all the time. We take
                                 pride in delivering excellence in every project we undertake, ensuring client
@@ -153,28 +513,30 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="row g-4">
-                            <div class="col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="col-6 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
                                 <div class="counter-box">
                                     <i class="fa fa-briefcase"></i>
-                                    <span class="counter-number">MANY</span>
+                                    <span class="counter-number"><span class="counter-value"
+                                            data-target="500">0</span><span class="counter-suffix">+</span></span>
                                     <p class="counter-text">Projects Done</p>
                                 </div>
                             </div>
-                            <div class="col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="col-6 col-md-4 wow fadeInUp" data-wow-delay="0.3s">
                                 <div class="counter-box">
                                     <i class="fa fa-smile"></i>
-                                    <span class="counter-number">MANY</span>
+                                    <span class="counter-number"><span class="counter-value"
+                                            data-target="350">0</span><span class="counter-suffix">+</span></span>
                                     <p class="counter-text">Happy Clients</p>
                                 </div>
                             </div>
-                            <div class=" wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="col-6 col-md-4 wow fadeInUp" data-wow-delay="0.5s">
                                 <div class="counter-box">
                                     <i class="fa fa-calendar-alt"></i>
-                                    <span class="counter-number">MANY</span>
+                                    <span class="counter-number"><span class="counter-value"
+                                            data-target="15">0</span><span class="counter-suffix">+</span></span>
                                     <p class="counter-text">Years Experience</p>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -183,226 +545,133 @@
             <!-- Bottom Wave -->
             <div class="custom-shape-divider-bottom-1663000000">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
-                    preserveAspectRatio="none">
+                    preserveAspectRatio="none" aria-hidden="true">
                     <path
                         d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
                         class="shape-fill"></path>
                 </svg>
             </div>
         </div>
-        <!-- counter end -->
+        <!-- Counter end -->
 
-        <!-- self banenr bengali starts -->
-        <div class="container py-5">
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <img src="images/self_intro_Bengali.jpg" alt="Bengali Intro" class="w-100 rounded shadow-sm">
-                </div>
-                <div class="col-md-6">
-                    <img src="images/self_intro_Hindi.jpg" alt="Hindi Intro" class="w-100 rounded shadow-sm">
-                </div>
-                <div class="col-md-6">
-                    <img src="images/self_intro_English.jpg" alt="English Intro" class="w-100 rounded shadow-sm">
-                </div>
-                <div class="col-md-6">
-                    <div class="h-100 rounded overflow-hidden shadow-sm">
-                        <iframe style="width:100%;height:100%;min-height:300px;"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2864.859307336682!2d88.38320090951318!3d22.524916634633428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0276b6e73fa16b%3A0x1db54fc53c1eb03e!2s37%2F3B%2C%20Dr%20G%20S%20Bose%20Rd%2C%20Bosepukur%2C%20Kasba%2C%20Kolkata%2C%20West%20Bengal%20700039!5e1!3m2!1sen!2sin!4v1702098456092!5m2!1sen!2sin"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- self banenr bengali ends -->
-
-
-
-        <!-- cards starts -->
-        <!-- Topic Cards -->
-        <div id="cards_landscape_wrap-2"
-            class="py-16 bg-gradient-to-br from-[#fffbf0] via-[#f7f1e3] to-[#eae0c8] relative">
+        <!-- ================= Services Cards ================= -->
+        <div id="services" class="py-16 relative">
             <div class="container mx-auto px-4 relative z-10">
-                <div class="text-center mb-12">
-                    <h1 class="text-4xl font-bold font-raleway text-[#562f1a] mb-2 section-heading">Our Specialized
-                        Services</h1>
-                    <div class="w-24 h-1 bg-[#cda45e] mx-auto rounded"></div>
+                <div class="section-head wow fadeInUp" data-wow-delay="0.1s">
+                    <span class="section-label">What We Offer</span>
+                    <h2 class="section-title">Our Specialized Services</h2>
+                    <div class="gold-divider"><span></span><i class="fas fa-gem"></i><span></span></div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Card 1 -->
-                    <div class="wow fadeInLeft h-full">
-                        <a href="" class="block h-full group">
-                            <div
-                                class="bg-gradient-to-br from-[#562f1a] to-[#754023] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 transform group-hover:-translate-y-2 h-full flex flex-col">
-                                <div class="h-64 overflow-hidden">
-                                    <img src="images/1.jpeg" alt="Polycoat Finish"
-                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                </div>
-                                <div class="p-6 flex-grow flex flex-col justify-center text-center">
-                                    <h6
-                                        class="text-xl font-bold font-raleway text-white uppercase mb-3 group-hover:text-[#cda45e] transition-colors">
-                                        Polycoat Finish</h6>
-                                    <p class="text-gray-200 text-sm font-ptsans leading-relaxed">Paraffinated Polyester
-                                        popularly known as Polycoat/Lamination is available in transparent and opaque
-                                        finishes.</p>
-                                </div>
+                    <div class="wow fadeInUp h-full" data-wow-delay="0.05s">
+                        <div class="svc-card">
+                            <div class="svc-img"><img src="images/1.jpeg" alt="Polycoat Finish" loading="lazy"></div>
+                            <div class="svc-body">
+                                <h6>Polycoat Finish</h6>
+                                <p>Paraffinated polyester popularly known as Polycoat/Lamination is available in
+                                    transparent and opaque finishes.</p>
                             </div>
-                        </a>
+                        </div>
                     </div>
 
                     <!-- Card 2 -->
-                    <div class="wow fadeInDown h-full">
-                        <a href="" class="block h-full group">
-                            <div
-                                class="bg-gradient-to-br from-[#562f1a] to-[#754023] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 transform group-hover:-translate-y-2 h-full flex flex-col">
-                                <div class="h-64 overflow-hidden">
-                                    <img src="images/2.jpeg" alt="PU Matte Finish"
-                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                </div>
-                                <div class="p-6 flex-grow flex flex-col justify-center text-center">
-                                    <h6
-                                        class="text-xl font-bold font-raleway text-white uppercase mb-3 group-hover:text-[#cda45e] transition-colors">
-                                        PU Finish</h6>
-                                    <p class="text-gray-200 text-sm font-ptsans leading-relaxed">Discover the smoothness
-                                        and durability of PU finish laminates to transform your surfaces.</p>
-                                </div>
+                    <div class="wow fadeInUp h-full" data-wow-delay="0.15s">
+                        <div class="svc-card">
+                            <div class="svc-img"><img src="images/2.jpeg" alt="PU Matte Finish" loading="lazy"></div>
+                            <div class="svc-body">
+                                <h6>PU Finish</h6>
+                                <p>Discover the smoothness and durability of PU finish laminates to transform your
+                                    surfaces.</p>
                             </div>
-                        </a>
+                        </div>
                     </div>
 
                     <!-- Card 3 -->
-                    <div class="wow fadeInUp h-full">
-                        <a href="" class="block h-full group">
-                            <div
-                                class="bg-gradient-to-br from-[#562f1a] to-[#754023] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 transform group-hover:-translate-y-2 h-full flex flex-col">
-                                <div class="h-64 overflow-hidden">
-                                    <img src="images/3.jpeg" alt="Polycoat Glossy"
-                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                </div>
-                                <div class="p-6 flex-grow flex flex-col justify-center text-center">
-                                    <h6
-                                        class="text-xl font-bold font-raleway text-white uppercase mb-3 group-hover:text-[#cda45e] transition-colors">
-                                        Polycoat Glossy</h6>
-                                    <p class="text-gray-200 text-sm font-ptsans leading-relaxed">Available in high-gloss
-                                        transparent and opaque finishes for a premium, mirrored look.</p>
-                                </div>
+                    <div class="wow fadeInUp h-full" data-wow-delay="0.25s">
+                        <div class="svc-card">
+                            <div class="svc-img"><img src="images/3.jpeg" alt="Polycoat Glossy" loading="lazy"></div>
+                            <div class="svc-body">
+                                <h6>Polycoat Glossy</h6>
+                                <p>Available in high-gloss transparent and opaque finishes for a premium, mirrored
+                                    look.</p>
                             </div>
-                        </a>
+                        </div>
                     </div>
 
                     <!-- Card 4 -->
-                    <div class="wow fadeInRight h-full">
-                        <a href="" class="block h-full group">
-                            <div
-                                class="bg-gradient-to-br from-[#562f1a] to-[#754023] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 transform group-hover:-translate-y-2 h-full flex flex-col">
-                                <div class="h-64 overflow-hidden">
-                                    <img src="images/4.jpeg" alt="Pattern Finish"
-                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                </div>
-                                <div class="p-6 flex-grow flex flex-col justify-center text-center">
-                                    <h6
-                                        class="text-xl font-bold font-raleway text-white uppercase mb-3 group-hover:text-[#cda45e] transition-colors">
-                                        Pattern Finish</h6>
-                                    <p class="text-gray-200 text-sm font-ptsans leading-relaxed">Hand Polish offers an
-                                        easy-to-use transparent wood polishing system for the best interior finish.</p>
-                                </div>
+                    <div class="wow fadeInUp h-full" data-wow-delay="0.35s">
+                        <div class="svc-card">
+                            <div class="svc-img"><img src="images/4.jpeg" alt="Pattern Finish" loading="lazy"></div>
+                            <div class="svc-body">
+                                <h6>Pattern Finish</h6>
+                                <p>Hand Polish offers an easy-to-use transparent wood polishing system for the best
+                                    interior finish.</p>
                             </div>
-                        </a>
+                        </div>
                     </div>
 
-                    <!-- Card 5 (Repeated Content for layout) -->
-                    <div class="wow fadeInLeft h-full">
-                        <a href="" class="block h-full group">
-                            <div
-                                class="bg-gradient-to-br from-[#562f1a] to-[#754023] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 transform group-hover:-translate-y-2 h-full flex flex-col">
-                                <div class="h-64 overflow-hidden">
-                                    <img src="images/5.jpeg" alt="PU Finish Variant"
-                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                </div>
-                                <div class="p-6 flex-grow flex flex-col justify-center text-center">
-                                    <h6
-                                        class="text-xl font-bold font-raleway text-white uppercase mb-3 group-hover:text-[#cda45e] transition-colors">
-                                        PU Finish</h6>
-                                    <p class="text-gray-200 text-sm font-ptsans leading-relaxed">Long-lasting protection
-                                        and a smooth feel, perfect for high-traffic furniture.</p>
-                                </div>
+                    <!-- Card 5 -->
+                    <div class="wow fadeInUp h-full" data-wow-delay="0.45s">
+                        <div class="svc-card">
+                            <div class="svc-img"><img src="images/5.jpeg" alt="PU Finish Variant" loading="lazy"></div>
+                            <div class="svc-body">
+                                <h6>PU Finish</h6>
+                                <p>Long-lasting protection and a smooth feel, perfect for high-traffic furniture.</p>
                             </div>
-                        </a>
+                        </div>
                     </div>
 
                     <!-- Card 6 -->
-                    <div class="wow fadeInDown h-full">
-                        <a href="" class="block h-full group">
-                            <div
-                                class="bg-gradient-to-br from-[#562f1a] to-[#754023] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 transform group-hover:-translate-y-2 h-full flex flex-col">
-                                <div class="h-64 overflow-hidden">
-                                    <img src="images/6.jpeg" alt="PU Finish Variant 2"
-                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                </div>
-                                <div class="p-6 flex-grow flex flex-col justify-center text-center">
-                                    <h6
-                                        class="text-xl font-bold font-raleway text-white uppercase mb-3 group-hover:text-[#cda45e] transition-colors">
-                                        PU Finish</h6>
-                                    <p class="text-gray-200 text-sm font-ptsans leading-relaxed">Experience the superior
-                                        durability and aesthetic appeal of our advanced PU coating.</p>
-                                </div>
+                    <div class="wow fadeInUp h-full" data-wow-delay="0.55s">
+                        <div class="svc-card">
+                            <div class="svc-img"><img src="images/6.jpeg" alt="PU Finish Variant 2" loading="lazy"></div>
+                            <div class="svc-body">
+                                <h6>PU Finish</h6>
+                                <p>Experience the superior durability and aesthetic appeal of our advanced PU
+                                    coating.</p>
                             </div>
-                        </a>
+                        </div>
                     </div>
 
                     <!-- Card 7 -->
-                    <div class="wow fadeInUp h-full">
-                        <a href="" class="block h-full group">
-                            <div
-                                class="bg-gradient-to-br from-[#562f1a] to-[#754023] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 transform group-hover:-translate-y-2 h-full flex flex-col">
-                                <div class="h-64 overflow-hidden">
-                                    <img src="images/7.jpeg" alt="Polycoat Finish Variant"
-                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                </div>
-                                <div class="p-6 flex-grow flex flex-col justify-center text-center">
-                                    <h6
-                                        class="text-xl font-bold font-raleway text-white uppercase mb-3 group-hover:text-[#cda45e] transition-colors">
-                                        Polycoat Glossy</h6>
-                                    <p class="text-gray-200 text-sm font-ptsans leading-relaxed">High-gloss lamination
-                                        that provides a stunning, glass-like finish to your woodworks.</p>
-                                </div>
+                    <div class="wow fadeInUp h-full" data-wow-delay="0.65s">
+                        <div class="svc-card">
+                            <div class="svc-img"><img src="images/7.jpeg" alt="Polycoat Finish Variant"
+                                    loading="lazy"></div>
+                            <div class="svc-body">
+                                <h6>Polycoat Glossy</h6>
+                                <p>High-gloss lamination that provides a stunning, glass-like finish to your
+                                    woodworks.</p>
                             </div>
-                        </a>
+                        </div>
                     </div>
 
                     <!-- Card 8 -->
-                    <div class="wow fadeInRight h-full">
-                        <a href="" class="block h-full group">
-                            <div
-                                class="bg-gradient-to-br from-[#562f1a] to-[#754023] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 transform group-hover:-translate-y-2 h-full flex flex-col">
-                                <div class="h-64 overflow-hidden">
-                                    <img src="images/8.jpeg" alt="Polycoat Finish Variant 2"
-                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                </div>
-                                <div class="p-6 flex-grow flex flex-col justify-center text-center">
-                                    <h6
-                                        class="text-xl font-bold font-raleway text-white uppercase mb-3 group-hover:text-[#cda45e] transition-colors">
-                                        Polycoat Glossy</h6>
-                                    <p class="text-gray-200 text-sm font-ptsans leading-relaxed">Durable and resistant,
-                                        our polycoat finish ensures your furniture stays new for years.</p>
-                                </div>
+                    <div class="wow fadeInUp h-full" data-wow-delay="0.75s">
+                        <div class="svc-card">
+                            <div class="svc-img"><img src="images/8.jpeg" alt="Polycoat Finish Variant 2"
+                                    loading="lazy"></div>
+                            <div class="svc-body">
+                                <h6>Polycoat Glossy</h6>
+                                <p>Durable and resistant, our polycoat finish ensures your furniture stays new for
+                                    years.</p>
                             </div>
-                        </a>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
+        <!-- Services cards end -->
 
-        <!-- cards ends -->
-
-
-
-        <!-- New Service Cards Section -->
-        <div class="container-fluid py-5 service-cards-section">
+        <!-- ================= Expertise Section ================= -->
+        <div class="container-fluid py-5 service-cards-section" id="expertise">
             <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Our Expertise</h1>
+                <div class="section-head wow fadeInUp" data-wow-delay="0.1s">
+                    <span class="section-label">Beyond The Brush</span>
+                    <h2 class="section-title">Our Expertise</h2>
+                    <div class="gold-divider"><span></span><i class="fas fa-gem"></i><span></span></div>
                     <p>We provide premium wood polishing and restoration services tailored to your specific needs.</p>
                 </div>
                 <div class="row g-4">
@@ -421,8 +690,8 @@
                             <div class="p-4">
                                 <i class="fa fa-3x fa-building text-primary mb-4"></i>
                                 <h5 class="mb-3">Commercial Projects</h5>
-                                <p>Large-scale wood finishing for offices, hotels, and commercial spaces with durability
-                                    in mind.</p>
+                                <p>Large-scale wood finishing for offices, hotels, and commercial spaces with
+                                    durability in mind.</p>
                             </div>
                         </div>
                     </div>
@@ -448,87 +717,68 @@
                 </div>
             </div>
         </div>
-        <!-- New Service Cards Section End -->
+        <!-- Expertise Section End -->
 
-        <!-- FAQ Section -->
-        <div class="py-16 bg-[#f9fafb]">
+        <!-- ================= FAQ Section ================= -->
+        <div class="py-16" id="faq">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-12 wow fadeInUp" data-wow-delay="0.1s">
-                    <h1 class="text-4xl font-bold font-raleway text-[#562f1a] mb-2">Frequently Asked Questions</h1>
-                    <div class="w-24 h-1 bg-[#cda45e] mx-auto rounded"></div>
-                    <p class="text-gray-600 mt-4 text-lg">Find answers to common questions about our services and
-                        processes.</p>
+                <div class="section-head wow fadeInUp" data-wow-delay="0.1s">
+                    <span class="section-label">Need Answers?</span>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <div class="gold-divider"><span></span><i class="fas fa-gem"></i><span></span></div>
+                    <p>Find answers to common questions about our services and processes.</p>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6 wow fadeInUp" data-wow-delay="0.2s">
                     <!-- FAQ Item 1 -->
-                    <details
-                        class="group bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-md [&_summary::-webkit-details-marker]:hidden h-fit">
-                        <summary
-                            class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-[#562f1a] font-raleway outline-none">
+                    <details class="faq-item">
+                        <summary class="faq-q">
                             <span>What is the difference between Hand Polish and PU Finish?</span>
-                            <span
-                                class="ml-4 flex-shrink-0 text-[#cda45e] transition duration-300 group-open:-rotate-180">
-                                <i class="fas fa-chevron-down"></i>
-                            </span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                         </summary>
-                        <div class="px-6 pb-6 text-gray-600 font-ptsans leading-relaxed border-t border-gray-50 pt-4">
-                            Hand polish is a traditional method that gives a natural, warm look to wood and is easier to
-                            repair. PU (Polyurethane) finish creates a thicker, more durable protective layer that is
-                            water-resistant and available in various sheen levels from matte to high gloss.
+                        <div class="faq-a">
+                            Hand polish is a traditional method that gives a natural, warm look to wood and is easier
+                            to repair. PU (Polyurethane) finish creates a thicker, more durable protective layer that
+                            is water-resistant and available in various sheen levels from matte to high gloss.
                         </div>
                     </details>
 
                     <!-- FAQ Item 2 -->
-                    <details
-                        class="group bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-md [&_summary::-webkit-details-marker]:hidden h-fit">
-                        <summary
-                            class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-[#562f1a] font-raleway outline-none">
+                    <details class="faq-item">
+                        <summary class="faq-q">
                             <span>Do you offer onsite polishing services?</span>
-                            <span
-                                class="ml-4 flex-shrink-0 text-[#cda45e] transition duration-300 group-open:-rotate-180">
-                                <i class="fas fa-chevron-down"></i>
-                            </span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                         </summary>
-                        <div class="px-6 pb-6 text-gray-600 font-ptsans leading-relaxed border-t border-gray-50 pt-4">
+                        <div class="faq-a">
                             Yes, absolutely! We have a dedicated team of expert craftsmen who can come to your home or
-                            office to perform the polishing work. We take great care to protect your surroundings while
-                            working onsite.
+                            office to perform the polishing work. We take great care to protect your surroundings
+                            while working onsite.
                         </div>
                     </details>
 
                     <!-- FAQ Item 3 -->
-                    <details
-                        class="group bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-md [&_summary::-webkit-details-marker]:hidden h-fit">
-                        <summary
-                            class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-[#562f1a] font-raleway outline-none">
+                    <details class="faq-item">
+                        <summary class="faq-q">
                             <span>How long does a typical furniture restoration take?</span>
-                            <span
-                                class="ml-4 flex-shrink-0 text-[#cda45e] transition duration-300 group-open:-rotate-180">
-                                <i class="fas fa-chevron-down"></i>
-                            </span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                         </summary>
-                        <div class="px-6 pb-6 text-gray-600 font-ptsans leading-relaxed border-t border-gray-50 pt-4">
-                            The timeline varies depending on the condition and size of the furniture. A standard dining
-                            table restoration might take 3-5 days. We provide a specific estimated completion date after
-                            inspecting your items.
+                        <div class="faq-a">
+                            The timeline varies depending on the condition and size of the furniture. A standard
+                            dining table restoration might take 3-5 days. We provide a specific estimated completion
+                            date after inspecting your items.
                         </div>
                     </details>
 
                     <!-- FAQ Item 4 -->
-                    <details
-                        class="group bg-white rounded-lg shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-md [&_summary::-webkit-details-marker]:hidden h-fit">
-                        <summary
-                            class="flex items-center justify-between p-6 cursor-pointer text-lg font-bold text-[#562f1a] font-raleway outline-none">
+                    <details class="faq-item">
+                        <summary class="faq-q">
                             <span>Can you match the color of my existing furniture?</span>
-                            <span
-                                class="ml-4 flex-shrink-0 text-[#cda45e] transition duration-300 group-open:-rotate-180">
-                                <i class="fas fa-chevron-down"></i>
-                            </span>
+                            <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
                         </summary>
-                        <div class="px-6 pb-6 text-gray-600 font-ptsans leading-relaxed border-t border-gray-50 pt-4">
-                            Yes, our "Custom Finishes" service is designed exactly for this. We can create custom stains
-                            and color blends to match your new pieces with your existing furniture set perfectly.
+                        <div class="faq-a">
+                            Yes, our "Custom Finishes" service is designed exactly for this. We can create custom
+                            stains and color blends to match your new pieces with your existing furniture set
+                            perfectly.
                         </div>
                     </details>
                 </div>
@@ -536,15 +786,15 @@
         </div>
         <!-- FAQ Section End -->
 
-
-
-        <div class="bg-gradient-to-r from-[#2c1810] to-[#46281a] text-white pt-16 pb-8 border-t-4 border-[#cda45e]">
+        <!-- ================= Footer / Contact ================= -->
+        <div class="bg-gradient-to-r from-[#2c1810] to-[#46281a] text-white pt-16 pb-8 border-t-4 border-[#cda45e]"
+            id="contact">
             <div class="container mx-auto px-4">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
                     <!-- Address Section -->
-                    <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="lg:col-span-3 wow fadeInUp" data-wow-delay="0.1s">
                         <h4
-                            class="text-2xl font-bold font-raleway text-[#cda45e] mb-6 uppercase tracking-wider relative inline-block">
+                            class="text-xl font-bold font-raleway text-[#cda45e] mb-6 uppercase tracking-wider relative inline-block">
                             Address
                             <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-[#cda45e]"></span>
                         </h4>
@@ -575,14 +825,31 @@
                         </div>
                     </div>
 
-                    <!-- Contact Section -->
-                    <div class="wow fadeInUp" data-wow-delay="0.3s">
+                    <!-- Quick Links -->
+                    <div class="lg:col-span-2 wow fadeInUp" data-wow-delay="0.2s">
                         <h4
-                            class="text-2xl font-bold font-raleway text-[#cda45e] mb-6 uppercase tracking-wider relative inline-block">
+                            class="text-xl font-bold font-raleway text-[#cda45e] mb-6 uppercase tracking-wider relative inline-block">
+                            Quick Links
+                            <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-[#cda45e]"></span>
+                        </h4>
+                        <ul class="footer-links">
+                            <li><a href="#home"><i class="fas fa-angle-right"></i>Home</a></li>
+                            <li><a href="#about"><i class="fas fa-angle-right"></i>About</a></li>
+                            <li><a href="#services"><i class="fas fa-angle-right"></i>Services</a></li>
+                            <li><a href="#expertise"><i class="fas fa-angle-right"></i>Expertise</a></li>
+                            <li><a href="#faq"><i class="fas fa-angle-right"></i>FAQ</a></li>
+                            <li><a href="tel:+919163384579"><i class="fas fa-angle-right"></i>Call Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Section -->
+                    <div class="lg:col-span-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <h4
+                            class="text-xl font-bold font-raleway text-[#cda45e] mb-6 uppercase tracking-wider relative inline-block">
                             Contact Us
                             <span class="absolute bottom-0 left-0 w-1/2 h-0.5 bg-[#cda45e]"></span>
                         </h4>
-                        <div class="space-y-6">
+                        <div class="space-y-5">
                             <a href="tel:+919163384579"
                                 class="group flex items-center bg-white/5 p-4 rounded-lg hover:bg-white/10 transition-all duration-300 hover:border-[#cda45e]/50">
                                 <div
@@ -614,9 +881,10 @@
                     </div>
 
                     <!-- Details Image Section -->
-                    <div class="wow fadeInUp flex items-center justify-center lg:justify-end" data-wow-delay="0.5s">
+                    <div class="lg:col-span-3 wow fadeInUp flex items-center justify-center lg:justify-end"
+                        data-wow-delay="0.5s">
                         <div class="bg-white/5 p-2 rounded-xl backdrop-blur-sm">
-                            <img src="images/ftr_details.png" alt="Footer Detail"
+                            <img src="images/ftr_details.png" alt="Footer Detail" loading="lazy"
                                 class="rounded-lg shadow-2xl max-w-full h-auto opacity-90 hover:opacity-100 transition-opacity">
                         </div>
                     </div>
@@ -624,17 +892,26 @@
 
                 <div class="border-t border-white/10 mt-12 pt-8 text-center">
                     <p class="text-gray-400 text-sm">
-                        Designed & Developed by <a href="javascript:void(0)"
+                        Designed &amp; Developed by <a href="javascript:void(0)"
                             class="text-[#cda45e] hover:text-white font-bold transition-colors">DK Enterprise</a>.
-                        <span class="block md:inline mt-2 md:mt-0">Copyright © 2023. All Rights Reserved.</span>
+                        <span class="block md:inline mt-2 md:mt-0">Copyright &copy; 2023. All Rights Reserved.</span>
                     </p>
                 </div>
             </div>
         </div>
-
-
+        <!-- Footer end -->
 
     </div>
+
+    <!-- ================= Floating Buttons ================= -->
+    <a id="whatsapp-float" class="float-btn" href="https://wa.me/919163384579" target="_blank" rel="noopener"
+        aria-label="Chat with us on WhatsApp" title="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <button id="back-to-top" class="float-btn" aria-label="Back to top" title="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- JavaScript Libraries -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
@@ -644,52 +921,74 @@
     <script src="js/select2.min.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <!-- for counter -->
+
+    <!-- ===== Custom Scripts: navbar effects, smooth anchors, counters ===== -->
     <script>
-        var a = 0;
-        $(window).scroll(function () {
+        $(function () {
+            // Init WOW animations (safe if already initialized)
+            if (typeof WOW !== 'undefined') { try { new WOW().init(); } catch (e) { } }
 
-            var oTop = $('#counter').offset().top - window.innerHeight;
-            if (a == 0 && $(window).scrollTop() > oTop) {
-                // Spinner
-                var spinner = function () {
-                    setTimeout(function () {
-                        if ($('#spinner').length > 0) {
-                            $('#spinner').removeClass('show');
-                        }
-                    }, 1);
-                };
-                spinner();
-                $.fn.jQuerySimpleCounter = function (options) {
-                    var settings = $.extend({
-                        start: 0,
-                        end: 100,
+            var navBar = $('#navigation-bar');
+            var backTop = $('#back-to-top');
+            var counterStarted = false;
+
+            function runCounters() {
+                $('#counter .counter-value').each(function () {
+                    var el = $(this);
+                    var target = parseInt(el.data('target'), 10) || 0;
+                    $({ v: 0 }).animate({ v: target }, {
+                        duration: 2200,
                         easing: 'swing',
-                        duration: 400,
-                        complete: ''
-                    }, options);
-
-                    var thisElement = $(this);
-
-                    $({ count: settings.start }).animate({ count: settings.end }, {
-                        duration: settings.duration,
-                        easing: settings.easing,
-                        step: function () {
-                            var mathCount = Math.ceil(this.count);
-                            thisElement.text(mathCount);
-                        },
-                        complete: settings.complete
+                        step: function () { el.text(Math.floor(this.v)); },
+                        complete: function () { el.text(target); }
                     });
-                };
-
-
-                $('#number1').jQuerySimpleCounter({ end: 12, duration: 3000 });
-                $('#number2').jQuerySimpleCounter({ end: 55, duration: 3000 });
-                $('#number3').jQuerySimpleCounter({ end: 359, duration: 2000 });
-                $('#number4').jQuerySimpleCounter({ end: 246, duration: 2500 });
-                a = 1;
+                });
             }
 
+            function onScroll() {
+                var st = $(window).scrollTop();
+
+                // Sticky navbar shadow
+                navBar.toggleClass('scrolled', st > 40);
+
+                // Back to top visibility
+                backTop.toggleClass('show', st > 500);
+
+                // Active nav link highlighting
+                var pos = st + 130;
+                $('#navigation-bar .nav-link[href^="#"]').removeClass('active');
+                $('#navigation-bar .nav-link[href^="#"]').each(function () {
+                    var link = $(this);
+                    var target = $(link.attr('href'));
+                    if (target.length && target.offset().top <= pos && target.offset().top + target.outerHeight() > pos) {
+                        link.addClass('active');
+                    }
+                });
+                if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
+                    $('#navigation-bar .nav-link[href^="#"]').removeClass('active');
+                    $('#navigation-bar .nav-link[href="#contact"]').addClass('active');
+                }
+
+                // Start counters when visible
+                if (!counterStarted && $('#counter').length) {
+                    var oTop = $('#counter').offset().top - $(window).height() + 80;
+                    if (st > oTop) { counterStarted = true; runCounters(); }
+                }
+            }
+
+            $(window).on('scroll', onScroll);
+            onScroll();
+
+            // Back to top click
+            backTop.on('click', function () {
+                $('html, body').stop().animate({ scrollTop: 0 }, 600);
+            });
+
+            // Close mobile menu after clicking a nav link
+            $('#navigation-bar .nav-link').on('click', function () {
+                var collapse = $('#navbarNav');
+                if (collapse.hasClass('show')) { collapse.collapse('hide'); }
+            });
         });
     </script>
 
