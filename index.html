@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
-        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&family=Raleway:wght@400;500;600;700;800&family=PT+Sans:wght@400;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&family=Raleway:wght@400;500;600;700;800&family=PT+Sans:wght@400;700&family=Playfair+Display:wght@600;700;800&family=Tiro+Bangla&display=swap"
         rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
@@ -37,8 +37,7 @@
         }
     </script>
 
-    <!-- Template Stylesheet -->
-    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <!-- css/style.css is RETIRED: everything this page needs is in the inline styles below -->
 
     <!-- ===== Custom Elegant Styling (DK Enterprise) ===== -->
     <style>
@@ -53,7 +52,7 @@
         }
 
         html { scroll-behavior: smooth; }
-        body { font-family: 'Raleway', 'Heebo', sans-serif; background: #fffdf8; }
+        body { font-family: 'Raleway', 'Heebo', sans-serif; background: #fffdf8; overflow-x: hidden; }
         [id] { scroll-margin-top: 88px; }
 
         ::selection { background: var(--gold); color: var(--brown-dark); }
@@ -132,10 +131,13 @@
         #home .carousel-item img { filter: saturate(1.05); }
         #home .carousel-caption { right: 8%; left: 8%; bottom: 9%; z-index: 5; }
 
-        /* ===== SMALL ELEGANT SLIDER ARROWS =====
-           Compact 42px circles instead of Bootstrap's giant full-height
-           control zones. Locked with !important so nothing can enlarge
-           or shift them. Hover = subtle glow, no movement. */
+        /* Full-width edge-to-edge hero slider
+           (was provided by the old style.css) */
+        #home.slider-section,
+        #home.slider-section > .row,
+        #home.slider-section .col-md-12 { margin: 0 !important; padding: 0 !important; }
+
+        /* ===== SMALL ELEGANT SLIDER ARROWS ===== */
         #home .carousel-control-prev,
         #home .carousel-control-next {
             display: flex !important;
@@ -164,7 +166,6 @@
             opacity: 1 !important;
             box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
         }
-        /* Tiny chevron icons */
         #home .carousel-control-prev-icon,
         #home .carousel-control-next-icon {
             width: 16px !important;
@@ -256,9 +257,9 @@
             transition: transform .4s ease, box-shadow .4s ease;
         }
         #about .about-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(44, 24, 16, .16); }
-        #about .about-img { overflow: hidden; }
-        #about .about-img img { width: 100%; display: block; transition: transform .6s ease; }
-        #about .about-card:hover .about-img img { transform: scale(1.06); }
+        #about .about-photo { overflow: hidden; }
+        #about .about-photo img { width: 100%; display: block; transition: transform .6s ease; }
+        #about .about-card:hover .about-photo img { transform: scale(1.06); }
         #about .about-label {
             display: block; padding: 12px 16px; text-align: center; font-weight: 700;
             color: var(--brown); background: var(--cream-2);
@@ -302,10 +303,15 @@
             color: var(--gold); text-transform: uppercase; letter-spacing: 2px;
             font-size: 12px; margin: 8px 0 0; font-weight: 600;
         }
-        /* Bottom wave — blends perfectly into the section below */
+        /* ===== Bottom wave =====
+           IMPORTANT: rotate(180deg) flips the SVG into a proper bottom wave.
+           This transform used to come from the old style.css — it must live
+           here now that the file is unlinked. Without it the wave renders
+           upside-down and the section edge looks flat. */
         #counter .custom-shape-divider-bottom-1663000000 {
             position: absolute; bottom: 0; left: 0; width: 100%;
             overflow: hidden; line-height: 0; margin: 0; border: 0;
+            transform: rotate(180deg);
         }
         #counter .custom-shape-divider-bottom-1663000000 svg { width: 100%; height: 95px; display: block; }
         #counter .custom-shape-divider-bottom-1663000000 .shape-fill { fill: #fffbf0; }
@@ -347,6 +353,7 @@
             background: #fff; border: 1px solid rgba(205, 164, 94, .28);
             border-radius: 16px; transition: all .4s ease; height: 100%;
             overflow: hidden; position: relative;
+            box-shadow: 0 6px 20px rgba(44, 24, 16, .07);
         }
         #expertise .service-item::before {
             content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px;
@@ -409,6 +416,18 @@
         }
         #back-to-top.show { opacity: 1; visibility: visible; }
         #back-to-top:hover { transform: translateY(-4px); }
+
+        /* ============================================================
+           OLD TEMPLATE STYLESHEET (css/style.css) — RETIRED
+           The few parts of it this page still needed are below.
+           ============================================================ */
+        .font-raleway { font-family: 'Raleway', sans-serif; }
+        .font-ptsans { font-family: 'PT Sans', 'Raleway', sans-serif; }
+        #contact .font-serif { font-family: 'Tiro Bangla', serif; }
+
+        /* Vaccine: the old "shape" was .about-img::before — it can never
+           render again, even if the old stylesheet is ever re-linked */
+        .about-img::before { content: none !important; display: none !important; }
     </style>
 </head>
 
@@ -538,7 +557,7 @@
             <div class="row g-4">
                 <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="about-card">
-                        <div class="about-img">
+                        <div class="about-photo">
                             <img src="images/self_intro_Bengali.jpg" alt="Introduction in Bengali" loading="lazy">
                         </div>
                         <span class="about-label">বাংলা &middot; Bengali</span>
@@ -546,7 +565,7 @@
                 </div>
                 <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="about-card">
-                        <div class="about-img">
+                        <div class="about-photo">
                             <img src="images/self_intro_Hindi.jpg" alt="Introduction in Hindi" loading="lazy">
                         </div>
                         <span class="about-label">हिन्दी &middot; Hindi</span>
@@ -554,7 +573,7 @@
                 </div>
                 <div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="about-card">
-                        <div class="about-img">
+                        <div class="about-photo">
                             <img src="images/self_intro_English.jpg" alt="Introduction in English" loading="lazy">
                         </div>
                         <span class="about-label">English</span>
