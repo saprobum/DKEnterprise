@@ -74,8 +74,8 @@
         #navigation-bar .navbar-brand img { height: 62px; width: auto; transition: height .35s ease; }
         #navigation-bar.scrolled .navbar-brand img { height: 52px; }
 
-        /* ===== FIX: Tailwind's "collapse" utility (visibility: collapse) clashes with
-           Bootstrap's navbar "collapse" class and makes the links invisible. Force visible. ===== */
+        /* FIX: Tailwind's "collapse" utility clashes with Bootstrap's navbar
+           "collapse" class and makes the links invisible. Force visible. */
         #navigation-bar .navbar-collapse { visibility: visible !important; }
         @media (min-width: 992px) {
             #navigation-bar .navbar-collapse { display: flex !important; flex-basis: auto !important; }
@@ -131,6 +131,60 @@
         #home { position: relative; }
         #home .carousel-item img { filter: saturate(1.05); }
         #home .carousel-caption { right: 8%; left: 8%; bottom: 9%; z-index: 5; }
+
+        /* ===== SMALL ELEGANT SLIDER ARROWS =====
+           Compact 42px circles instead of Bootstrap's giant full-height
+           control zones. Locked with !important so nothing can enlarge
+           or shift them. Hover = subtle glow, no movement. */
+        #home .carousel-control-prev,
+        #home .carousel-control-next {
+            display: flex !important;
+            top: 50% !important;
+            bottom: auto !important;
+            width: 42px !important;
+            height: 42px !important;
+            border-radius: 50% !important;
+            background: rgba(44, 24, 16, .55) !important;
+            border: 1px solid rgba(205, 164, 94, .55) !important;
+            backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+            opacity: 1 !important;
+            transform: translateY(-50%) !important;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, .25);
+            transition: background .3s ease, border-color .3s ease, box-shadow .3s ease;
+            z-index: 3;
+        }
+        #home .carousel-control-prev { left: 14px !important; }
+        #home .carousel-control-next { right: 14px !important; }
+        #home .carousel-control-prev:hover,
+        #home .carousel-control-next:hover,
+        #home .carousel-control-prev:focus,
+        #home .carousel-control-next:focus {
+            background: rgba(44, 24, 16, .85) !important;
+            border-color: var(--gold) !important;
+            opacity: 1 !important;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, .35);
+        }
+        /* Tiny chevron icons */
+        #home .carousel-control-prev-icon,
+        #home .carousel-control-next-icon {
+            width: 16px !important;
+            height: 16px !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: 100% 100% !important;
+        }
+        #home .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
+        }
+        #home .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+        }
+        @media (max-width: 576px) {
+            #home .carousel-control-prev,
+            #home .carousel-control-next { width: 36px !important; height: 36px !important; }
+            #home .carousel-control-prev { left: 8px !important; }
+            #home .carousel-control-next { right: 8px !important; }
+        }
 
         #home .hero-caption {
             background: rgba(30, 16, 10, .55);
@@ -219,7 +273,7 @@
             background: linear-gradient(165deg, #2c1810 0%, #3d2315 55%, #46281a 100%);
             border-top: 3px solid var(--gold);
             padding: 90px 0 160px;
-            margin: 0 !important; /* FIX: no gap between wave and next section */
+            margin: 0 !important;
         }
         #counter .sub-title {
             color: var(--gold); letter-spacing: 3px; text-transform: uppercase;
@@ -257,11 +311,9 @@
         #counter .custom-shape-divider-bottom-1663000000 .shape-fill { fill: #fffbf0; }
 
         /* ================= SERVICES CARDS ================= */
-        /* FIX: gradient now runs straight DOWN so the top edge is exactly the wave's
-           cream color across the full width — no visible line under the wave */
         #services {
             background: linear-gradient(to bottom, #fffbf0 0%, #f7f1e3 45%, #eae0c8 100%);
-            margin-top: -1px; /* hides any sub-pixel seam */
+            margin-top: -1px;
         }
         #services .svc-card {
             background: linear-gradient(160deg, var(--brown) 0%, var(--brown-mid) 100%);
