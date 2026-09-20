@@ -74,6 +74,14 @@
         #navigation-bar .navbar-brand img { height: 62px; width: auto; transition: height .35s ease; }
         #navigation-bar.scrolled .navbar-brand img { height: 52px; }
 
+        /* ===== FIX: Tailwind's "collapse" utility (visibility: collapse) clashes with
+           Bootstrap's navbar "collapse" class and makes the links invisible. Force visible. ===== */
+        #navigation-bar .navbar-collapse { visibility: visible !important; }
+        @media (min-width: 992px) {
+            #navigation-bar .navbar-collapse { display: flex !important; flex-basis: auto !important; }
+            #navigation-bar .navbar-nav { flex-direction: row !important; }
+        }
+
         #navigation-bar .nav-link {
             font-family: 'Raleway', sans-serif; font-weight: 600; font-size: 14.5px;
             letter-spacing: .6px; text-transform: uppercase; color: var(--brown);
@@ -95,6 +103,20 @@
         }
         .nav-cta::after { display: none; }
         .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(205, 164, 94, .55); color: #fff !important; }
+
+        /* Keep links on one line on medium-large screens */
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+            #navigation-bar .nav-link { padding: 10px 10px !important; font-size: 13px; }
+            .nav-cta { padding: 9px 16px !important; font-size: 13px; }
+            #navigation-bar .navbar-brand img { height: 56px; }
+        }
+
+        /* Hamburger (mobile) */
+        #navigation-bar .navbar-toggler {
+            border: 1px solid rgba(205, 164, 94, .45);
+            border-radius: 10px; padding: 8px 10px;
+        }
+        #navigation-bar .navbar-toggler:focus { box-shadow: 0 0 0 3px rgba(205, 164, 94, .25); }
 
         @media (max-width: 991.98px) {
             #navigation-bar .navbar-collapse {
@@ -197,6 +219,7 @@
             background: linear-gradient(165deg, #2c1810 0%, #3d2315 55%, #46281a 100%);
             border-top: 3px solid var(--gold);
             padding: 90px 0 160px;
+            margin: 0 !important; /* FIX: no gap between wave and next section */
         }
         #counter .sub-title {
             color: var(--gold); letter-spacing: 3px; text-transform: uppercase;
@@ -225,15 +248,21 @@
             color: var(--gold); text-transform: uppercase; letter-spacing: 2px;
             font-size: 12px; margin: 8px 0 0; font-weight: 600;
         }
-        /* Bottom wave */
+        /* Bottom wave — blends perfectly into the section below */
         #counter .custom-shape-divider-bottom-1663000000 {
-            position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0;
+            position: absolute; bottom: 0; left: 0; width: 100%;
+            overflow: hidden; line-height: 0; margin: 0; border: 0;
         }
         #counter .custom-shape-divider-bottom-1663000000 svg { width: 100%; height: 95px; display: block; }
         #counter .custom-shape-divider-bottom-1663000000 .shape-fill { fill: #fffbf0; }
 
         /* ================= SERVICES CARDS ================= */
-        #services { background: linear-gradient(to bottom right, #fffbf0, #f7f1e3 55%, #eae0c8); }
+        /* FIX: gradient now runs straight DOWN so the top edge is exactly the wave's
+           cream color across the full width — no visible line under the wave */
+        #services {
+            background: linear-gradient(to bottom, #fffbf0 0%, #f7f1e3 45%, #eae0c8 100%);
+            margin-top: -1px; /* hides any sub-pixel seam */
+        }
         #services .svc-card {
             background: linear-gradient(160deg, var(--brown) 0%, var(--brown-mid) 100%);
             border-radius: 18px; overflow: hidden; height: 100%; display: flex; flex-direction: column;
@@ -314,19 +343,15 @@
         #contact .footer-links a:hover { color: var(--gold); }
         #contact .footer-links a:hover i { margin-right: 14px; }
 
-        /* ================= FLOATING BUTTONS ================= */
+        /* ================= BACK TO TOP ================= */
         .float-btn {
-            position: fixed; right: 22px; width: 52px; height: 52px; border-radius: 50%;
+            position: fixed; right: 22px; bottom: 22px; width: 52px; height: 52px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center; z-index: 1050;
-            box-shadow: 0 10px 26px rgba(44, 24, 16, .35); transition: transform .3s, opacity .3s, visibility .3s;
+            box-shadow: 0 10px 26px rgba(44, 24, 16, .35);
+            transition: transform .3s, opacity .3s, visibility .3s;
         }
-        #whatsapp-float {
-            bottom: 22px; background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-            color: var(--brown-dark); font-size: 26px; text-decoration: none;
-        }
-        #whatsapp-float:hover { transform: translateY(-4px) scale(1.05); color: var(--brown-dark); }
         #back-to-top {
-            bottom: 86px; background: linear-gradient(160deg, var(--brown), var(--brown-mid));
+            background: linear-gradient(160deg, var(--brown), var(--brown-mid));
             color: var(--gold); border: 1px solid rgba(205, 164, 94, .4); cursor: pointer;
             opacity: 0; visibility: hidden;
         }
@@ -342,7 +367,7 @@
             <a class="navbar-brand d-flex align-items-center" href="#home">
                 <img src="images/logo.png" alt="DK Enterprise Logo">
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -903,11 +928,7 @@
 
     </div>
 
-    <!-- ================= Floating Buttons ================= -->
-    <a id="whatsapp-float" class="float-btn" href="https://wa.me/919163384579" target="_blank" rel="noopener"
-        aria-label="Chat with us on WhatsApp" title="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- ================= Back To Top ================= -->
     <button id="back-to-top" class="float-btn" aria-label="Back to top" title="Back to top">
         <i class="fas fa-chevron-up"></i>
     </button>
